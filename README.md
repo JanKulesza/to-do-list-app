@@ -41,7 +41,9 @@ This is a simple web-based to-do app where users can create and manage tasks.
 ## How to Use
 
 1. Clone the repository:
-   [git clone https://github.com/JanKulesza/to-do-app.git](https://github.com/JanKulesza/to-do-list-app.git)
+   ```
+   git clone https://github.com/JanKulesza/to-do-app.git
+   ```
 
 2. Open `index.html` in your web browser.
 
@@ -55,4 +57,4 @@ This is a simple web-based to-do app where users can create and manage tasks.
 
 3. Adding functionality to header buttons
 
-5. Connection with database to track tasks' status
+4. Connection with database to track tasks' status
