@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./components/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/kute.js@2.2.4/dist/kute.min.js"></script>
+</head>
+
+<body>
+    <div id="add-task-overlay">
+        <div class="box">
+            <h3>Add Task</h3>
+            <form>
+                <label for="taskName">Enter task name:</label>
+                <p><input type="text" name="taskName" id="taskName"></p>
+                <label for="taskStartTime">Enter task start time:</label>
+                <p><input type="time" name="taskStartTime" id="taskStartTime"></p>
+                <label for="taskDuration">Enter task duration:</label>
+                <p><input type="number" name="taskDuration" id="taskDuration"></p>
+                <label for="taskDate">Choose Task Date</label>
+
+                <div class="task-dates">
+                    <div class="article-date focus" data-date-id="0">
+                        <h2>5</h2>
+                        <p>Mon</p>
+                    </div>
+                    <div class="article-date" data-date-id="1">
+                        <h2>5</h2>
+                        <p>Mon</p>
+                    </div>
+                    <div class="article-date" data-date-id="2">
+                        <h2>5</h2>
+                        <p>Mon</p>
+                    </div>
+                </div>
+
+            </form>
+            <div class="buttons">
+                <button class="submit">Add Task</button>
+                <button class="close">Close</button>
+            </div>
+        </div>
+
+    </div>
+    <header>
+
+        <div id="date">
+            <!--Current Date 5 May from JS-->
+            <p>5 May</p>
+        </div>
+
+    </header>
+    <section id="manager">
+        <div id="manager-info">
+            <h2>Today</h2>
+            <p>X tasks</p>
+        </div>
+        <div class="add-task-div">
+            <a href="#" class="add-task">Add New</a>
+            <svg id="visual" viewBox="0 0 900 600" width="900" height="600" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+                <g transform="translate(454.515136921402 302.7863608917428)">
+                    <path id="blob1"
+                        d="M83.7 -83.2C119.1 -70 165.9 -53.7 183.6 -22.2C201.3 9.3 189.8 56.2 161.7 82.5C133.5 108.8 88.7 114.5 52.4 115.4C16.1 116.2 -11.6 112.1 -51.4 110.8C-91.2 109.5 -143 111 -172.2 86.7C-201.5 62.4 -208.1 12.3 -193.8 -28.2C-179.6 -68.6 -144.4 -99.4 -108.6 -112.6C-72.8 -125.8 -36.4 -121.4 -6.2 -114.1C24.1 -106.7 48.2 -96.5 83.7 -83.2"
+                        fill="#ffffff"></path>
+                </g>
+                <g transform="translate(466.6290748403097 313.0030451677586)">
+                    <path id="blob2"
+                        d="M152.2 -177.4C195.5 -145 227.7 -95.4 231.7 -45C235.7 5.4 211.4 56.7 181.7 101.9C152.1 147.2 117.1 186.4 77.3 191.8C37.6 197.3 -6.8 169.2 -63.8 156.6C-120.8 144 -190.3 147 -229 115.2C-267.7 83.3 -275.7 16.7 -252.2 -32C-228.7 -80.6 -173.8 -111.1 -126.5 -142.8C-79.3 -174.5 -39.6 -207.2 7.4 -216C54.4 -224.9 108.8 -209.7 152.2 -177.4"
+                        fill="#ffffff"></path>
+                </g>
+
+
+            </svg>
+        </div>
+        <div class="custom-shape-divider-bottom-1714317601">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                    class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+
+    <main>
+        <article class="day" data-id="0">
+            <section class="article-header">
+                <div class="article-date focus">
+                    <h3>5</h3>
+                    <p>Mon</p>
+                </div>
+                <p class="hours">X hours a day</p>
+            </section>
+            <article class="tasks-group"></article>
+        </article>
+        <article class="day" data-id="1">
+            <section class="article-header">
+                <div class="article-date">
+                    <h3>5</h3>
+                    <p>Mon</p>
+                </div>
+                <p class="hours">X hours a day</p>
+            </section>
+            <article class="tasks-group"></article>
+        </article>
+        <article class="day" data-id="2">
+            <section class="article-header">
+                <div class="article-date">
+                    <h3>5</h3>
+                    <p>Mon</p>
+                </div>
+                <p class="hours">X hours a day</p>
+            </section>
+            <article class="tasks-group"></article>
+        </article>
+    </main>
+    <script src="./components/app.js"></script>
+</body>
+
+</html>

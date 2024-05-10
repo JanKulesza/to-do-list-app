@@ -1,0 +1,405 @@
+:root {
+    --main: #3939d8;
+    --secondary: white;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--main);
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    padding: 10px 5vw;
+    color: var(--secondary);
+    font-size: 1.5rem;
+}
+
+#date p {
+    font-size: 2rem;
+}
+
+#manager {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px 0 10px 10vw;
+    align-items: center;
+    height: 600px;
+    z-index: 1;
+    color: var(--secondary);
+    position: relative;
+}
+
+#manager-info {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+}
+
+#manager-info h2 {
+    font-weight: normal;
+    font-size: 4.5rem;
+    margin: 0;
+
+}
+
+#manager-info p {
+    font-weight: 200;
+    color: hsl(0, 0%, 80%);
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.add-task-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    position: relative;
+}
+
+#visual {
+    width: 700px;
+    height: 700px;
+    z-index: 0;
+    position: absolute;
+}
+
+#blob1,
+#blob2 {
+    z-index: 0;
+}
+
+#blob2 {
+    visibility: hidden;
+}
+
+.add-task,
+.box .submit {
+    border: 0;
+    color: var(--main);
+    z-index: 1;
+    text-decoration: none;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 200px;
+    cursor: pointer;
+}
+
+.tasks-group .add-task,
+.box .submit {
+    background-color: var(--main);
+    color: white;
+    width: 150px;
+    height: 45px;
+    font-size: 1.25rem;
+    margin-bottom: 100px;
+    border-radius: 10rem;
+}
+
+main {
+    background-color: var(--secondary);
+    min-height: 500px;
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+main .day {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+
+.article-header {
+    display: flex;
+    flex-direction: row;
+    height: 150px;
+    margin-bottom: 2rem;
+    align-items: center;
+}
+
+.article-date {
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f4f4;
+    height: 100px;
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.25rem;
+    cursor: pointer;
+}
+
+.article-date h3,
+.box .article-date h3 {
+    color: black;
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.article-header .focus h3,
+.task-dates .focus h3 {
+    color: white;
+}
+
+.article-date p {
+    font-weight: 200;
+    color: #999;
+    margin: 0;
+}
+
+.article-header .hours,
+.tasks-group .no-task {
+    margin: 30px;
+    display: flex;
+    align-items: center;
+    color: #999;
+    font-size: 1.25rem;
+}
+
+.tasks-group .no-task {
+    margin-top: 100px;
+}
+
+.tasks-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 1px #555 solid;
+    padding-right: 50px;
+    min-height: 500px;
+    width: 500px;
+}
+
+.task {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin: 20px 0;
+}
+
+.tasks-group .completed .task-info .task-desc h4,
+.tasks-group .completed .task-info .task-desc p {
+    text-decoration: line-through;
+}
+
+checkbox-dot .tasks-group .completed .req-time {
+    color: var(--main);
+}
+
+span.req-time {
+    padding: 4px;
+    margin-right: 10px;
+    font-size: 1.1rem;
+    text-align: center;
+    position: relative;
+    width: 80px;
+    color: #999;
+    transform: rotate(-90deg);
+    ;
+}
+
+.task-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 350px;
+    border-radius: 1.5rem;
+    height: 85px;
+
+}
+
+.tasks-group .focus .task-info,
+.article-header .focus,
+.task-dates .focus {
+    background-color: var(--main);
+    box-shadow: 0px 0px 20px #999;
+}
+
+.task-checkbox {
+    width: 30px;
+    height: 30px;
+    margin: 0px 30px;
+    accent-color: #3939d8;
+    border: 1px #999 solid;
+    cursor: pointer;
+}
+
+.disabled {
+    pointer-events: none;
+}
+
+.checkbox-info {
+    position: relative;
+}
+
+.checkbox-dot {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 2em;
+    left: 50px;
+    bottom: 0;
+    background-color: var(--main);
+}
+
+.focus .task-info .checkbox-dot {
+    background-color: white;
+}
+
+.task-desc {
+    height: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.task-desc h4 {
+    color: black;
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin: 0 0 10px 0;
+}
+
+.focus .task-desc h4 {
+    color: white;
+}
+
+.task-desc p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #999;
+}
+
+.focus .task-desc p {
+    color: #999;
+}
+
+#add-task-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 2;
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 25%;
+    height: auto;
+    background-color: white;
+    border-radius: 1.25rem;
+    padding: 40px;
+    text-align: center;
+}
+
+.box input {
+    width: 100%;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid #555;
+    outline: none;
+    text-align: center;
+    margin-bottom: 10px;
+
+}
+
+.box input:focus {
+    box-shadow: 0px 0px 10px #999;
+}
+
+.box h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.box form {
+    border-top: 1px #555 solid;
+    padding-top: 40px;
+}
+
+.box label {
+    font-size: 1.25rem;
+}
+
+.task-dates {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+
+.box .submit {
+    display: flex;
+    margin-bottom: 0;
+}
+
+.close {
+    background-color: #f8f4f4;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 45px;
+    border: none;
+    text-decoration: none;
+    border-radius: 1.25rem;
+    font-size: 1.15rem;
+    cursor: pointer;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.custom-shape-divider-bottom-1714317601 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    z-index: -1;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1714317601 svg {
+    position: relative;
+    display: block;
+    width: calc(105% + 1.3px);
+    height: 110px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1714317601 .shape-fill {
+    fill: #FFFFFF;
+}
